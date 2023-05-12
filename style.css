@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #172038FF;
+}
+
+.parallax {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg1, .bg2 {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg1 {
+  background-image: url('/img/background1.png');
+  animation: parallax1 5s linear infinite;
+}
+
+.bg2 {
+  background-image: url('./img/background2.png');
+  animation: parallax2 0.5s linear infinite;
+}
+
+#canvas{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#interface{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#b-left{
+    border: none;
+    position: absolute;
+    width: 20vw;
+    height: 10vh;
+    cursor: pointer;
+    bottom: 0px;
+}
+
+#b-right{
+    border: none;
+    position: absolute;
+    width: 20vw;
+    height: 10vh;
+    cursor: pointer;
+    bottom: 0px;
+    right: 0px;
+}
+
+#b-shot{
+    border: none;
+    position: absolute;
+    width: 20vw;
+    height: 10vh;
+    cursor: pointer;
+    bottom: 0px;
+    right: 40%;
+}
+
+
+@keyframes parallax1 {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes parallax2 {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
